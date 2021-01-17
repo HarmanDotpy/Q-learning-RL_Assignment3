@@ -197,6 +197,63 @@ optimal policy for problem 1
 
 \end_layout
 
+\begin_layout Subsection
+Comments
+\end_layout
+
+\begin_layout Itemize
+The optimal policy is as expected.
+ The winds are strong so even if it tries to counter it by taking steps
+ to the right and downwards, in order to go on a straight path, the strong
+ winds will anyway take it to the top.
+ So its best that the ship itsel goes right always and wind pushes it to
+ the topright, from where it can go down and left to reach F.
+\end_layout
+
+\begin_layout Itemize
+We see from the optimal policy that all states lead to F only.
+\end_layout
+
+\begin_layout Itemize
+For all values of epsilon, the same optimal pllicy was obtained after the
+ iteration was over.
+\end_layout
+
+\begin_layout Itemize
+Sum of values of the Q matrix were plotted, and a typical convergence plot
+ is as folows
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename q1.convergence.png
+	width 50page%
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Sum of all elements of Q matrix vs iterations
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Problem 2
 \end_layout
@@ -229,7 +286,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-optimal path for problem 1
+optimal path for problem 2
 \end_layout
 
 \end_inset
@@ -263,7 +320,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-optimal policy for problem 1
+optimal policy for problem 2
 \end_layout
 
 \end_inset
@@ -274,6 +331,84 @@ optimal policy for problem 1
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsection
+Comments
+\end_layout
+
+\begin_layout Itemize
+The optimal policy is as expected.
+ There are no winds and the ship should not go into the pirates area.
+ So it goes one step up, then right, till the end and then downwards to
+ reach F.
+ This is clearly the optimal policy for the ship.
+\end_layout
+
+\begin_layout Itemize
+For all values of epsilon, the same optimal pllicy was obtained after the
+ iteration was over.
+ For larger values of epsilon, the number of iterations required for convergence
+ was more(or equivalently the convergence was late).
+ This is expected becasue for larger epsilon it explores more than it exploits
+ and hence the convergence to the optimal takes more time
+\end_layout
+
+\begin_layout Itemize
+Sum of values of the Q matrix were plotted, and a typical convergence plot
+ is as folows
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename q1.convergence.png
+	width 50page%
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Sum of all elements of Q matrix vs iterations
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Last part of Problem 2
+\end_layout
+
+\begin_layout Itemize
+Yes this task is episodic as it has a defined end state which is absorbing.
+ ie the whole task runs for a finite amount of time till it reaches that
+ absorbing state which is the end state
+\end_layout
+
+\begin_layout Itemize
+The problem with epsilon greedy strategy is that, when running our iterations
+ after convergence of Q learning, the epsilon greedy strategy may take the
+ ship into the pirates area and that would decrease the average reward.
+\end_layout
+
+\begin_layout Itemize
+There is discrepancy.
+ The average reward should be -1*12 = -12 according to our optimal policy
+ but actually it comes lower when we run 1000 episodes.
 \end_layout
 
 \end_body

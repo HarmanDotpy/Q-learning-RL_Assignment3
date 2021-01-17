@@ -393,5 +393,24 @@ Sum of all elements of Q matrix vs iterations
 Last part of Problem 2
 \end_layout
 
+\begin_layout Itemize
+Yes this task is episodic as it has a defined end state which is absorbing.
+ ie the whole task runs for a finite amount of time till it reaches that
+ absorbing state which is the end state
+\end_layout
+
+\begin_layout Itemize
+The problem with epsilon greedy strategy is that, when running our iterations
+ after convergence of Q learning, the epsilon greedy strategy may take the
+ ship into the pirates area and that would decrease the average reward.
+\end_layout
+
+\begin_layout Itemize
+There is discrepancy.
+ The average reward should be -1*12 = -12 according to our optimal policy
+ but actually it comes lower (eg-600, -700) when we run 1000 episodes an
+ take the average and this is happening due to the epsilon greedy strategy
+\end_layout
+
 \end_body
 \end_document
